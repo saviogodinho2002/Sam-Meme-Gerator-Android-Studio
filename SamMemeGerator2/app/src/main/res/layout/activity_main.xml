@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fundo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:isScrollContainer="false"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgDez"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:clickable="false"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxImgDez"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxImgDez"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxImgDez"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/_01011" />
+
+    <ImageView
+        android:id="@+id/imgLogoFoda"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:clickable="false"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxImgLogoFoda"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxImgLogoFoda"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxImgLogoFoda"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/sam_logo2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxImgDez"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:onClick="checkedBoxClick_3"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxIrineu"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <CheckBox
+        android:id="@+id/checkBoxImgLogoFoda"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:checked="true"
+        android:onClick="checkedBoxClick_4"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.691"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgDez"
+        app:layout_constraintVertical_bias="0.158" />
+
+    <ImageView
+        android:id="@+id/imgMeme"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="false"
+        android:clickable="false"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:scaleX="1"
+
+
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/vin_diesel_brasileiro_meme1" />
+
+    <ImageView
+        android:id="@+id/imgBarraBranca"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imgMeme"
+        app:layout_constraintTop_toTopOf="@+id/imgMeme"
+        app:srcCompat="@drawable/tela_vazia_branca" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="314dp"
+        android:layout_height="23dp"
+        android:clickable="false"
+        android:text="eis que sua namorada não tem pinto"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imgMeme"
+        app:layout_constraintTop_toTopOf="@+id/imgMeme"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <ImageView
+        android:id="@+id/imgLogoSam"
+        android:layout_width="131dp"
+        android:layout_height="111dp"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+        app:srcCompat="@drawable/sam_logo2" />
+
+    <EditText
+        android:id="@+id/cxTexto"
+        android:layout_width="255dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:onClick="isTyping"
+        android:text="sua namorada não tem pinto"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEisQue"
+        android:layout_width="127dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:onClick="checkedBoxClick_1"
+        android:text="@string/chekbox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxQuando"
+        android:layout_width="125dp"
+        android:layout_height="34dp"
+        android:onClick="checkedBoxClick_1"
+        android:text="quando "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxEisQue" />
+
+    <CheckBox
+        android:id="@+id/checkBoxVoce"
+        android:layout_width="133dp"
+        android:layout_height="34dp"
+        android:onClick="checkedBoxClick_1"
+        android:text="ai voce e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxQuando" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDez"
+        android:layout_width="133dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:onClick="checkedBoxClick_2"
+        android:text=" a 10/10"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBoxIrineu"
+        android:layout_width="133dp"
+        android:layout_height="34dp"
+        android:onClick="checkedBoxClick_2"
+        android:text="seu pai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAmigo" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAmigo"
+        android:layout_width="133dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="140dp"
+        android:checked="false"
+        android:onClick="checkedBoxClick_2"
+        android:text=" seu amigo"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDez"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="isTyping"
+        android:text="add"
+        app:layout_constraintBottom_toBottomOf="@+id/cxTexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cxTexto"
+        app:layout_constraintTop_toTopOf="@+id/cxTexto" />
+
+    <ImageView
+        android:id="@+id/imgVinDiesel"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:clickable="false"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxImgVinDiesel"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxImgVinDiesel"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxImgVinDiesel"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/vin_diesel_brasileiro_meme1"
+        tools:srcCompat="@drawable/vin_diesel_brasileiro_meme1" />
+
+    <ImageView
+        android:id="@+id/imgLogoPreta"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:clickable="false"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxImgLogoPreto"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxImgLogoPreto"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxImgLogoPreto"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_sam_png"
+        tools:srcCompat="@drawable/logo_sam_png" />
+
+    <CheckBox
+        android:id="@+id/checkBoxImgVinDiesel"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:checked="true"
+        android:onClick="checkedBoxClick_3"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVoce"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <CheckBox
+        android:id="@+id/checkBoxImgLogoPreto"
+        android:layout_width="32dp"
+        android:layout_height="35dp"
+        android:onClick="checkedBoxClick_4"
+        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgVinDiesel"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="89dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
