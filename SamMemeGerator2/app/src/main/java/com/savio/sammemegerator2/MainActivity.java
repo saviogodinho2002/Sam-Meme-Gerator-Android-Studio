@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
             montarMeme();
         }
-    public void checkedBoxClick_3(View check) {
+    public void checkedBoxImgToMemeClick(View check) {
 
         CheckBox cheque = findViewById(check.getId());
         ImageView img_to_meme;
