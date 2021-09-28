@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fundo"
+    android:id="@+id/tela"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="false"
@@ -42,84 +42,24 @@
         android:id="@+id/checkBoxImgDez"
         android:layout_width="32dp"
         android:layout_height="35dp"
+        android:layout_marginTop="15dp"
         android:onClick="checkedBoxImgToMemeClick"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxIrineu"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxIrineu" />
 
     <CheckBox
         android:id="@+id/checkBoxImgLogoFoda"
         android:layout_width="32dp"
         android:layout_height="35dp"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:onClick="checkedBoxClick_4"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgDez"
-        app:layout_constraintVertical_bias="0.158" />
-
-    <ImageView
-        android:id="@+id/imgMeme"
-        android:layout_width="320dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="12dp"
-        android:adjustViewBounds="false"
-        android:clickable="false"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"
-        android:scaleX="1"
-
-
-        android:scaleY="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vin_diesel_brasileiro_meme1" />
-
-    <ImageView
-        android:id="@+id/imgBarraBranca"
-        android:layout_width="320dp"
-        android:layout_height="52dp"
-        android:clickable="false"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imgMeme"
-        app:layout_constraintTop_toTopOf="@+id/imgMeme"
-        app:srcCompat="@drawable/tela_vazia_branca" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="314dp"
-        android:layout_height="23dp"
-        android:clickable="false"
-        android:text="eis que sua namorada não tem pinto"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
-        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imgMeme"
-        app:layout_constraintTop_toTopOf="@+id/imgMeme"
-        app:layout_constraintVertical_bias="0.063" />
-
-    <ImageView
-        android:id="@+id/imgLogoSam"
-        android:layout_width="131dp"
-        android:layout_height="111dp"
-        android:adjustViewBounds="true"
-        android:clickable="false"
-        android:cropToPadding="true"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
-        app:layout_constraintEnd_toEndOf="@+id/imgMeme"
-        app:srcCompat="@drawable/sam_logo2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgDez" />
 
     <EditText
         android:id="@+id/cxTexto"
@@ -131,10 +71,12 @@
         android:text="sua namorada não tem pinto"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/telaprint"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoPreta"
+        app:layout_constraintVertical_bias="0.921" />
 
     <CheckBox
         android:id="@+id/checkBoxEisQue"
@@ -178,12 +120,10 @@
         android:layout_marginTop="16dp"
         android:onClick="checkedBoxClick_2"
         android:text=" a 10/10"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/checkBoxIrineu"
@@ -200,16 +140,13 @@
         android:id="@+id/checkBoxAmigo"
         android:layout_width="133dp"
         android:layout_height="34dp"
-        android:layout_marginBottom="140dp"
         android:checked="false"
         android:onClick="checkedBoxClick_2"
         android:text=" seu amigo"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxDez"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDez" />
 
     <Button
         android:id="@+id/button"
@@ -219,7 +156,8 @@
         android:text="add"
         app:layout_constraintBottom_toBottomOf="@+id/cxTexto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cxTexto"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cxTexto" />
 
     <ImageView
@@ -256,26 +194,24 @@
         android:id="@+id/checkBoxImgVinDiesel"
         android:layout_width="32dp"
         android:layout_height="35dp"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:onClick="checkedBoxImgToMemeClick"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxImgDez"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxVoce"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVoce" />
 
     <CheckBox
         android:id="@+id/checkBoxImgLogoPreto"
         android:layout_width="32dp"
         android:layout_height="35dp"
+        android:layout_marginTop="15dp"
         android:onClick="checkedBoxClick_4"
-        app:layout_constraintBottom_toTopOf="@+id/imgMeme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgVinDiesel"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImgVinDiesel" />
 
     <androidx.constraintlayout.widget.Barrier
         android:layout_width="wrap_content"
@@ -304,6 +240,81 @@
         app:barrierDirection="left"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="89dp" />
+
+    <Button
+        android:id="@+id/btnSalvarMeme"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="btnSalvarImgClicked"
+        android:text="SALVAR MEME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/telaprint"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalvarMeme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMeme"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:adjustViewBounds="false"
+            android:clickable="false"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+
+
+            android:scaleX="1"
+            android:scaleY="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/vin_diesel_brasileiro_meme1" />
+
+        <ImageView
+            android:id="@+id/imgLogoSam"
+            android:layout_width="131dp"
+            android:layout_height="111dp"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:cropToPadding="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
+            app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+            app:srcCompat="@drawable/sam_logo2" />
+
+        <ImageView
+            android:id="@+id/imgBarraBranca"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+            app:layout_constraintStart_toStartOf="@+id/imgMeme"
+            app:layout_constraintTop_toTopOf="@+id/imgMeme"
+            app:srcCompat="@drawable/tela_vazia_branca" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="250dp"
+            android:layout_height="23dp"
+            android:clickable="false"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="eis que sua namorada não tem pinto"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imgMeme"
+            app:layout_constraintStart_toStartOf="@+id/imgMeme"
+            app:layout_constraintTop_toTopOf="@+id/imgMeme" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,14 +2,24 @@ package com.savio.sammemegerator2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+
+import android.os.Build;
 import android.os.Bundle;
+
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        text_parte1 =  "eis que";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"},0);
+        }
+        text_parte1 =  "eis que ";
         text_parte2 =  "";
         text_parte3 =  "a sua namorada não tem pinto";
 
@@ -53,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkedBoxClick_1(View check)  {
-        //ImageView imagem = findViewById(R.id.checkBox1);
-        TextView texto = findViewById(R.id.textView1);
+
+
         CheckBox cheque = findViewById(check.getId());
         if(cheque.isChecked())
             text_parte1 = cheque.getText().toString();
@@ -66,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
         montarMeme();
     }
         public void checkedBoxClick_2(View check)  {
-            //ImageView imagem = findViewById(R.id.checkBox1);
-            TextView texto = findViewById(R.id.textView1);
+
             CheckBox cheque = findViewById(check.getId());
             if(cheque.isChecked())
                 text_parte2 =  cheque.getText().toString();
@@ -145,7 +157,25 @@ public class MainActivity extends AppCompatActivity {
 
        }
 
+    public void btnSalvarImgClicked(View v){
+        Bitmap meme = screenShot(findViewById(R.id.telaprint));
+        MediaStore.Images.Media.insertImage(getContentResolver(), meme, "SamMemeGeratorMeme" , "meme");
+        Toast.makeText(this,"salvo na galeira",Toast.LENGTH_SHORT).show();
+
+    }
+    public Bitmap screenShot(View view) {
+        View img = findViewById(R.id.imgMeme);
+        View img1 = findViewById(R.id.imgLogoSam);
+
+        Bitmap bitmap = Bitmap.createBitmap(img.getWidth(),
+                img.getHeight(), Bitmap.Config.ARGB_8888);
 
 
+
+
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+        return bitmap;
+    }
 
 }
