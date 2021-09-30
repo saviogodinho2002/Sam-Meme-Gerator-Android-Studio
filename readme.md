@@ -21,4 +21,3 @@ O meme é formado por 3 Imageview em um ConstraintLayout, uma sendo o fundo do m
 *captura do meme
 
 Simplemente é feito um bitmap do ConstrainLayout onde esta o meme e depois isso é salvo na galeria (necessário permissão)
-
