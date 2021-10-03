@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +51,70 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"},0);
             requestPermissions(new String[]{"android.permission.READ_EXTERNAL_STORAGE"},1);
         }
+        iniciandoListas();
+        iniciandoSeekBars();
+
+
+
+    }
+    public  void iniciandoSeekBars(){
+        SeekBar seekBarX = findViewById(R.id.seekBarX);
+        seekBarX.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mudaOrientacaoMeme(seekBar, progress);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        SeekBar seekBarY = findViewById(R.id.seekBarY);
+        seekBarY.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mudaOrientacaoMeme(seekBar, progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        SeekBar seekBarZ = findViewById(R.id.seekBarZ);
+        seekBarZ.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mudaOrientacaoMeme(seekBar, progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+    }
+    public void iniciandoListas(){
         //iniciando as 3 partes do meme que aparece quando usuário entra no App
         text_parte1 =  "eis que ";
         text_parte2 =  "";
@@ -280,4 +345,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public void mudaOrientacaoMeme(SeekBar seekBar, int progress){
+        ImageView meme = findViewById(R.id.imgMeme);
+
+        if(seekBar == findViewById(R.id.seekBarX)) {
+
+            meme.setRotationX(progress);
+
+        }else if(seekBar == findViewById(R.id.seekBarY)){
+
+            meme.setRotationY(progress);
+        }else if(seekBar == findViewById(R.id.seekBarZ)){
+
+            meme.setRotation(progress);
+        }
+    }
+
 }

@@ -522,7 +522,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="341dp"
+                android:layout_height="440dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -562,47 +562,73 @@
                         app:layout_constraintTop_toTopOf="@+id/cxTexto" />
                 </LinearLayout>
 
+                <SeekBar
+                    android:id="@+id/seekBarX"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:max="180"
+                    android:progress="0"
+                    android:saveEnabled="false" />
+
+                <SeekBar
+                    android:id="@+id/seekBarY"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:max="180"
+                    android:progress="0" />
+
+                <SeekBar
+                    android:id="@+id/seekBarZ"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:max="180"
+                    android:progress="0" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/telaprint"
                     android:layout_width="250dp"
                     android:layout_height="250dp"
-                    app:layout_constraintBottom_toTopOf="@+id/btnSalvarMeme"
+                    android:foregroundGravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:id="@+id/imgMeme"
                         android:layout_width="250dp"
                         android:layout_height="250dp"
-                        android:minHeight="250dp"
-                        android:minWidth="250dp"
-                        android:maxHeight="250dp"
-                        android:maxWidth="250dp"
                         android:adjustViewBounds="false"
                         android:clickable="false"
                         android:cropToPadding="true"
+                        android:maxWidth="250dp"
+                        android:maxHeight="250dp"
+                        android:minWidth="250dp"
+                        android:minHeight="250dp"
+
+
                         android:scaleType="centerCrop"
-
-
                         android:scaleX="1"
                         android:scaleY="1"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/vin_diesel_brasileiro_meme1" />
 
                     <ImageView
                         android:id="@+id/imgLogoSam"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:minHeight="100dp"
-                        android:minWidth="100dp"
-                        android:maxHeight="100dp"
-                        android:maxWidth="100dp"
                         android:adjustViewBounds="true"
                         android:clickable="false"
                         android:cropToPadding="true"
+                        android:maxWidth="100dp"
+                        android:maxHeight="100dp"
+                        android:minWidth="100dp"
+                        android:minHeight="100dp"
                         android:scaleType="fitCenter"
                         app:layout_constraintBottom_toBottomOf="@+id/imgMeme"
                         app:layout_constraintEnd_toEndOf="@+id/imgMeme"
@@ -622,12 +648,12 @@
                     <TextView
                         android:id="@+id/textView1"
                         android:layout_width="250dp"
-                        android:minHeight="23dp"
-                        android:minWidth="250dp"
-                        android:maxHeight="23dp"
-                        android:maxWidth="250dp"
                         android:layout_height="23dp"
                         android:clickable="false"
+                        android:maxWidth="250dp"
+                        android:maxHeight="23dp"
+                        android:minWidth="250dp"
+                        android:minHeight="23dp"
                         android:paddingLeft="2dp"
                         android:paddingTop="3dp"
                         android:text="eis que sua namorada não tem pinto"
@@ -637,6 +663,7 @@
                         app:layout_constraintEnd_toEndOf="@+id/imgMeme"
                         app:layout_constraintStart_toStartOf="@+id/imgMeme"
                         app:layout_constraintTop_toTopOf="@+id/imgMeme" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <Button
